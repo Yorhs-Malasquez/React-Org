@@ -5,7 +5,7 @@ const CampoTexto = (props) => {
     const placeholderModificado = `${props.placeholder}...`
     return <div className="campo-texto">
         <label>{props.titulo.toUpperCase()}</label>
-        <input placeholder={placeholderModificado}></input>   
+        <input placeholder={placeholderModificado} required={props.required}></input>   
     </div>
 }
 
