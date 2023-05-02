@@ -4,7 +4,7 @@ import CampoTexto from "../campo-texto";
 import ListaOpciones from "../lista-opciones";
 import Boton from "../boton";
 //props son datos que vamos a enviar a nuestros componentes
-const Formulario = ()=>{
+const Formulario = (props)=>{
 
     const [nombre, actualizarNombre] = useState("")
     const [puesto, actualizarPuesto] = useState("")
@@ -50,6 +50,7 @@ const Formulario = ()=>{
             <ListaOpciones 
                 valor={equipo}
                 actualizarEquipo={actualizarEquipo}
+                equipos = {props.equipos}
             />
             <Boton>
                 Crear
