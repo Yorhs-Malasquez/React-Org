@@ -3,13 +3,13 @@ import "./campoTexto.css"
 const CampoTexto = (props) => {
 
     //los props son datos que podemos enviar a nuestros componentes
-    console.log("datos:",props);
+    //console.log("datos:",props);
     const placeholderModificado = `${props.placeholder}...`
 
     const manejarCambio = (e) =>{
         
         props.actualizarValor(e.target.value)
-        console.log("cambio",e.target.value);
+        //console.log("cambio",e.target.value);
     }
 
     return <div className="campo-texto">

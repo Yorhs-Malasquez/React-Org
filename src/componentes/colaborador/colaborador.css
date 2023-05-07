@@ -2,6 +2,7 @@
     width: 280px;
     margin-bottom: 24px;
     position: relative;
+
 }
 
 .colaborador .encabezado {
@@ -46,4 +47,9 @@
     position: absolute;
     right: -15px;
     top: -15px;
+}
+.eliminar{
+    position: absolute;
+    right: -15px;
+    top : -15px
 }

@@ -11,6 +11,7 @@ const Formulario = (props)=>{
     const [foto, actualizarFoto] = useState("")
     const [equipo, actualizarEquipo] = useState("")
     
+    const {registrarColaborador} = props
 
     const manejarenvio = (e) => {
         e.preventDefault();//permite que la pagina no se visualice el efecto de recarga
@@ -21,7 +22,7 @@ const Formulario = (props)=>{
             foto: foto,
             equipo
         }
-        console.log(datosEnviar);
+        registrarColaborador(datosEnviar);
     }
     return <section className="formulario">
         <form onSubmit={manejarenvio}>
