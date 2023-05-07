@@ -131,7 +131,11 @@ function App() {
     actualizarEquipos(equiposActualizados)
   }
   
-  //lista de equipos
+  //funciones para crear equipo
+  const crearEquipo = (nuevoEquipo)=>{
+    console.log(nuevoEquipo);
+    actualizarEquipos([...equipos, {...nuevoEquipo, id: uuid()}])
+  }
 
   // mostrarFormulario === true ? esto es igual a  mostrarFormulario ?
   return (
@@ -141,6 +145,7 @@ function App() {
       {mostrarFormulario && <Formulario
         equipos={equipos.map((equipo) => equipo.titulo)}
         registrarColaborador = {registrarColaborador}
+        crearEquipo = {crearEquipo}
       />}
 
       <MiOrg cambiarMostrar={cambiarMostrar} />
