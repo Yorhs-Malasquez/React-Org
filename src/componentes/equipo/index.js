@@ -5,7 +5,7 @@ import hexToRgba from "hex-to-rgba"//se debe importar la libreria
 const Equipo = (props) => {
     //Destructuración
     const{colorPrimario, colorSecundario, titulo, id} = props.datos
-    const {colaboradores, eliminarColaborador, actualizarColor} = props
+    const {colaboradores, eliminarColaborador, actualizarColor,like} = props
     const obj={
         backgroundColor:hexToRgba(colorPrimario, 0.6)//para el efecto de opacidad
     }
@@ -33,6 +33,7 @@ const Equipo = (props) => {
                             key={index}
                             colorPrimario={colorPrimario}
                             eliminarColaborador = {eliminarColaborador}
+                            like ={like}
                         />)
                     }
                 </div>

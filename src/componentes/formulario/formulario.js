@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./formulario.css";
-import CampoTexto from "../campo-texto";
+import Campo from "../campo";
 import ListaOpciones from "../lista-opciones";
 import Boton from "../boton";
 //props son datos que vamos a enviar a nuestros componentes
@@ -38,21 +38,21 @@ const Formulario = (props) => {
     return <section className="formulario">
         <form onSubmit={manejarenvio}>
             <h2>Rellena el formulario para crear el colaborador</h2>
-            <CampoTexto
+            <Campo
                 titulo="Nombre"
                 placeholder="Ingresar Nombre"
                 required
                 valor={nombre}
                 actualizarValor={actualizarNombre}
             />
-            <CampoTexto
+            <Campo
                 titulo="Puesto"
                 placeholder="Ingresar Puesto"
                 required
                 valor={puesto}
                 actualizarValor={actualizarPuesto}
             />
-            <CampoTexto
+            <Campo
                 titulo="Foto"
                 placeholder="Ingresar enlace de foto"
                 required
@@ -70,19 +70,20 @@ const Formulario = (props) => {
         </form>
         <form onSubmit={manejarNuevoEquipo}>
             <h2>Rellena el formulario para crear el equipo</h2>
-            <CampoTexto
+            <Campo
                 titulo="Titulo"
                 placeholder="Ingresar Título"
                 required
                 valor={titulo}
                 actualizarValor={actualizarTitulo}
             />
-            <CampoTexto
+            <Campo
                 titulo="Color"
                 placeholder="Ingresar el color en Héxa"
                 required
                 valor={color}
                 actualizarValor={actualizarColor}
+                type="color"
             />
             <Boton>
                 Registrar Equipo
